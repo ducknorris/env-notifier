@@ -1,4 +1,4 @@
-# EnvStatus
+# EnvNotifier
 
 Middleware that displays the current Environment notification for every html page. Designed to work both in production and in development.
 
