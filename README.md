@@ -2,6 +2,8 @@
 
 Middleware that displays the current Environment notification for every html page. Designed to work both in production and in development.
 
+![alt tag](https://raw.github.com/ducknorris/env_notifier/master/assets/preview1.png)
+
 ## Installation
 
 Add this line to your application's Gemfile:
