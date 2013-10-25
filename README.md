@@ -42,15 +42,15 @@ Or just for production environment:
 
     Rack::EnvNotifier.config.authorize_environment = lambda {|env| true } if Rails.env.production?
 
-There are several configuration options:
+### There are several configuration options
 
-* Position on screen
+#### Position on screen
 
     Rack::EnvNotifier.config.position_on_screen = "top"
 
 Available options are: top, right, bottom, left.
 
-* Notification message
+#### Notification message
 
     Rack::EnvNotifier.config.notification_message = "development"
 
