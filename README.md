@@ -1,6 +1,6 @@
 # EnvNotifier [![Build Status](https://secure.travis-ci.org/ducknorris/env_notifier.png)](http://travis-ci.org/ducknorris/env_notifier)
 
-Middleware that displays the current Environment notification for every html page. Designed to work both in production and in development.
+Middleware that displays the current environment notification for every html page. Designed to work both in production and in development.
 
 ![alt tag](https://raw.github.com/ducknorris/env_notifier/master/assets/preview1.png)
 
