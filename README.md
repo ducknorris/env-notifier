@@ -1,6 +1,6 @@
 # EnvNotifier [![Build Status](https://secure.travis-ci.org/ducknorris/env_notifier.png)](http://travis-ci.org/ducknorris/env_notifier)
 
-Middleware that displays the current environment notification for every html page. Designed to work both in production and in development.
+Middleware that displays the custom environment notification for every html page. Designed to work both in production and in development.
 
 ![alt tag](https://raw.github.com/ducknorris/env_notifier/master/assets/preview1.png)
 
@@ -32,21 +32,15 @@ Or install it yourself as:
 
 ## Usage
 
-This Gem is working out of the box in development environment.
+This Gem will display a custom notification on every html page.
 
-For all environments configure an initializer like so:
-
-    Rack::EnvNotifier.config.authorize_environment = lambda {|env| true }
-
-Or just for production environment:
-
-    Rack::EnvNotifier.config.authorize_environment = lambda {|env| true } if Rails.env.production?
+    Rack::EnvNotifier.config.notify? = lambda {|env| Rails.env.development? }
 
 ### There are several configuration options
 
 #### Position on screen
 
-    Rack::EnvNotifier.config.position_on_screen = "top"
+    Rack::EnvNotifier.config.position = "top"
 
 Available options are: top, right, bottom, left.
 
@@ -54,15 +48,15 @@ Available options are: top, right, bottom, left.
 
     Rack::EnvNotifier.config.notification_message = "development"
 
-By default the message it will be the name of the current environment. This can be overriden like so:
+For Ruby on Rails, by default the message it will be the name of the current environment. This can be overriden like so:
 
     case Rails.env
     when "development"
-      Rack::EnvNotifier.config.notification_message = "safe environment"
+      Rack::EnvNotifier.config.message = "safe environment"
     when "staging"
-      Rack::EnvNotifier.config.notification_message = "qa environment"
+      Rack::EnvNotifier.config.message = "qa environment"
     else
-      Rack::EnvNotifier.config.notification_message = "hot environment"
+      Rack::EnvNotifier.config.message = "hot environment"
     end
 
 The notification uses ``#env-notifer`` CSS ID. This can be customized further on, using custom CSS.
@@ -84,8 +78,12 @@ The notification uses ``#env-notifer`` CSS ID. This can be customized further on
 
 ## Contributing
 
+Thanks to our [contributors](https://github.com/ducknorris/env_notifier/graphs/contributors).
+
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+#### Inspired by [harleyttd / miniprofiler](https://github.com/harleyttd/miniprofiler/)
