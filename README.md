@@ -32,9 +32,13 @@ Or install it yourself as:
 
 ## Usage
 
-This Gem will display a custom notification on every html page.
+This Gem will display a custom notification on every html page. By default it will only work on Development Environment. This can be overriden like so:
 
-    Rack::EnvNotifier.notify? = true if Rails.env.development?
+    Rack::EnvNotifier.notify? = true if Rails.env.production?
+
+or
+
+    Rack::EnvNotifier.notify? = true if request.remote_ip == "127.0.0.0"
 
 ### There are several configuration options
 
