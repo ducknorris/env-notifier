@@ -45,7 +45,11 @@ module Rack
 
         # inject notification
         if headers.has_key?('Content-Type') && !headers['Content-Type'].match(/text\/html/).nil? then
-          body.write EnvNotifier.notification
+          begin
+            body << EnvNotifier.notification
+          rescue
+            body.write EnvNotifier.notification
+          end
         end
       end
 
