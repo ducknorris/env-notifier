@@ -34,32 +34,13 @@ Or install it yourself as:
 
 This Gem will display a custom notification on every html page.
 
-    Rack::EnvNotifier.config.notify? = lambda {|env| Rails.env.development? }
+    Rack::EnvNotifier.notify? = true if Rails.env.development?
 
 ### There are several configuration options
 
 #### Position on screen
 
-    Rack::EnvNotifier.config.position = "top"
-
-Available options are: top, right, bottom, left.
-
-#### Notification message
-
-    Rack::EnvNotifier.config.notification_message = "development"
-
-For Ruby on Rails, by default the message it will be the name of the current environment. This can be overriden like so:
-
-    case Rails.env
-    when "development"
-      Rack::EnvNotifier.config.message = "safe environment"
-    when "staging"
-      Rack::EnvNotifier.config.message = "qa environment"
-    else
-      Rack::EnvNotifier.config.message = "hot environment"
-    end
-
-The notification uses ``#env-notifer`` CSS ID. This can be customized further on, using custom CSS.
+Even though the "default" position is at the top of the page, the notification uses ``#env-notifer`` CSS ID. This can be customized further on, using custom CSS.
 
     #env-notifier {
       font-size: 16px;
@@ -75,6 +56,22 @@ The notification uses ``#env-notifer`` CSS ID. This can be customized further on
       color: #fff;
       font-weight: bold;
     }
+
+
+#### Notification message
+
+    Rack::EnvNotifier.message = "development mode"
+
+For Ruby on Rails, by default the message it will be the name of the current environment. This can be overriden like so:
+
+    case Rails.env
+    when "development"
+      Rack::EnvNotifier.message = "safe environment"
+    when "staging"
+      Rack::EnvNotifier.message = "qa environment"
+    else
+      Rack::EnvNotifier.message = "hot environment"
+    end
 
 ## Contributing
 
