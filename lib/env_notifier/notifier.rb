@@ -26,10 +26,8 @@ module Rack
       end
     end
 
-    def initialize(app, message = 'notification', notify = true)
+    def initialize(app)
       @app = app
-      @message = message
-      @notify = notify
     end
 
     def call(env)
