@@ -45,11 +45,7 @@ module Rack
 
         # inject notification
         if headers.has_key?('Content-Type') && !headers['Content-Type'].match(/text\/html/).nil? then
-          begin
-            body << EnvNotifier.notification
-          rescue
-            body.write EnvNotifier.notification
-          end
+          body = EnvNotifier::BodyAddProxy.new(body, EnvNotifier.notification)
         end
       end
 
