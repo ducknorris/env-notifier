@@ -5,7 +5,7 @@ module EnvNotifierRails
       Rack::EnvNotifier.notify  = Rails.env.development?
 
       # Install the Middleware
-      app.config.middleware.insert(0, Rack::EnvNotifier)
+      app.config.middleware.use Rack::EnvNotifier
     end
   end
 end
