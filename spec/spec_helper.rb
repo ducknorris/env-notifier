@@ -1,2 +1,2 @@
-require 'env-notifier'
+require 'rack-env-notifier'
 require 'rack/test'
