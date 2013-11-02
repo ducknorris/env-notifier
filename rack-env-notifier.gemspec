@@ -1,7 +1,7 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'env-notifier'
+require 'rack-env-notifier'
 
 Gem::Specification.new do |spec|
   spec.name             = "env-notifier"
@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email            = ["c@talin.ro"]
   spec.description      = %q{Middleware that displays the current Environment notification for every html page. Designed to work both in production and in development.}
   spec.summary          = %q{Know your ground!}
-  spec.homepage         = "https://github.com/ducknorris/env-notifier"
+  spec.homepage         = "https://github.com/ducknorris/rack-env-notifier"
   spec.license          = "MIT"
   spec.extra_rdoc_files = [
     "README.md",
