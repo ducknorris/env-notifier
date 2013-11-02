@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'rack-env-notifier'
 
 Gem::Specification.new do |spec|
-  spec.name             = "env-notifier"
+  spec.name             = "rack-env-notifier"
   spec.version          = Rack::EnvNotifier::VERSION
   spec.authors          = ["Catalin Ilinca"]
   spec.email            = ["c@talin.ro"]
