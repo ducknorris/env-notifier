@@ -1,5 +1,5 @@
 module EnvNotifierRails
-  class Railtie < Rails::Railtie
+  class Railtie < ::Rails::Railtie
     initializer 'rack_env_notifier.initialize' do |app|
       Rack::EnvNotifier.message = 'development'
       Rack::EnvNotifier.notify  = Rails.env.development?
