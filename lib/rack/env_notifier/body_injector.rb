@@ -24,7 +24,7 @@ module Rack
 
         @new_body.each do |line|
           if !@notification_added && line['<body']
-            line.gsub! (BODY_TAG_REGEX) {|match| %{{match}\n#{@text_to_be_injected}} }
+            line.gsub! (BODY_TAG_REGEX) {|match| %{#{match}\n#{@text_to_be_injected}} }
 
             @notification_added = true
           end
