@@ -1,3 +1,5 @@
+require 'rack/env_notifier/body_injector'
+
 module Rack
   class EnvNotifier
     class << self
@@ -31,6 +33,10 @@ module Rack
     end
 
     def call(env)
+      dup._call(env)
+    end
+
+    def _call(env)
       status, headers, body = @app.call(env)
 
       # inject headers, notification
@@ -43,11 +49,15 @@ module Rack
 
         # inject notification
         if headers.has_key?('Content-Type') && !headers['Content-Type'].match(/text\/html/).nil? then
-          body = EnvNotifier::BodyAddProxy.new(body, EnvNotifier.notification)
-        end
-      end
+          injector = BodyInjector.new(body, EnvNotifier.notification)
+          injector.inject!(env)
 
-      [status, headers, body]
+          headers['Content-Length'] = injector.content_length.to_s
+        end
+        [status, headers, body]
+      else
+        [status, headers, body]
+      end
     end
   end
 end

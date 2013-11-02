@@ -1,10 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'env_notifier/version'
+require 'env-notifier'
 
 Gem::Specification.new do |spec|
-  spec.name             = "env_notifier"
+  spec.name             = "env-notifier"
   spec.version          = Rack::EnvNotifier::VERSION
   spec.authors          = ["Catalin Ilinca"]
   spec.email            = ["c@talin.ro"]
