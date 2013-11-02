@@ -42,17 +42,18 @@ module Rack
       # inject headers, notification
       if status == 200 and EnvNotifier.notify?
 
-        # inject header
-        if headers.is_a? Hash
-          headers['X-EnvNotifier'] = EnvNotifier.message
-        end
-
         # inject notification
-        if headers.has_key?('Content-Type') && !headers['Content-Type'].match(/text\/html/).nil? then
+        if headers['Content-Type'] =~ %r{text/html} then
           injector = BodyInjector.new(body, EnvNotifier.notification)
           injector.inject!(env)
 
+          # inject header
+          if injector.notification_added
+            headers['X-EnvNotifier'] = EnvNotifier.message
+          end
+
           headers['Content-Length'] = injector.content_length.to_s
+          [status, headers, injector.new_body]
         end
         [status, headers, body]
       else

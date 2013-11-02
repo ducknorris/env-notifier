@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors          = ["Catalin Ilinca"]
   spec.email            = ["c@talin.ro"]
   spec.description      = %q{Middleware that displays the current Environment notification for every html page. Designed to work both in production and in development.}
-  spec.summary          = %q{Next time you won't hit Production.}
-  spec.homepage         = "https://github.com/ducknorris/env_notifier"
+  spec.summary          = %q{Know your ground!}
+  spec.homepage         = "https://github.com/ducknorris/env-notifier"
   spec.license          = "MIT"
   spec.extra_rdoc_files = [
     "README.md",
