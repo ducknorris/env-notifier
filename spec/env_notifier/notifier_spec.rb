@@ -1,4 +1,3 @@
-# encoding: utf-8
 require 'spec_helper'
 
 describe Rack::EnvNotifier do
@@ -8,7 +7,17 @@ describe Rack::EnvNotifier do
     @app ||= Rack::Builder.new {
       use Rack::EnvNotifier
       map '/some/path' do
-        run lambda { |env| [200, {'Content-Type' => 'text/html'}, '<h1>Howdy</h1>'] }
+        run lambda { |env| [200, {'Content-Type' => 'text/html'}, <<-EOF
+<html>
+  <head>
+    <title>Test page</title>
+  </head>
+  <body>
+    <h1>Howdy</h1>
+  </body>
+</html>
+          EOF
+        ]}
       end
     }.to_app
   end
