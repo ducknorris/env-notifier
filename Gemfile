@@ -10,5 +10,4 @@ group :test do
   gem 'ZenTest'
   gem 'autotest'
   gem 'metric_fu'
-  gem 'brakeman'
 end
