@@ -9,4 +9,6 @@ group :test do
   gem 'rspec'
   gem 'ZenTest'
   gem 'autotest'
+  gem 'metric_fu'
+  gem 'brakeman'
 end

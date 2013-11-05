@@ -1,6 +1,6 @@
 # Rack::EnvNotifier [![Build Status](https://secure.travis-ci.org/ducknorris/rack-env-notifier.png)](http://travis-ci.org/ducknorris/rack-env-notifier) [![Code Climate](https://codeclimate.com/github/ducknorris/rack-env-notifier.png)](https://codeclimate.com/github/ducknorris/rack-env-notifier)
 
-Middleware that displays the custom environment notification for every html page. Designed to work both in production and in development.
+Middleware that displays the custom (environment) notification for every html page. Designed to work both in production and in development.
 
 ![alt tag](https://raw.github.com/ducknorris/env_notifier/master/assets/preview1.png)
 
