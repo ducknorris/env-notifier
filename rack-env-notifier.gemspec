@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version          = Rack::EnvNotifier::VERSION
   spec.authors          = ["Catalin Ilinca"]
   spec.email            = ["c@talin.ro"]
-  spec.description      = %q{Middleware that displays the current Environment notification for every html page. Designed to work both in production and in development.}
+  spec.description      = %q{Middleware that displays the custom (environment) notification for every html page. Designed to work both in production and in development.}
   spec.summary          = %q{Know your ground!}
   spec.homepage         = "https://github.com/ducknorris/rack-env-notifier"
   spec.license          = "MIT"
