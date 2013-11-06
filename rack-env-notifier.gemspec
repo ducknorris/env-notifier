@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.license          = "MIT"
   spec.extra_rdoc_files = [
     "README.md",
-    "CHANGELOG"
+    "CHANGELOG.md"
   ]
 
   spec.files         = `git ls-files`.split($/)
