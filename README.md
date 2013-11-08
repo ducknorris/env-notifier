@@ -1,28 +1,28 @@
 # Rack::EnvNotifier [![Build Status](https://secure.travis-ci.org/ducknorris/rack-env-notifier.png)](http://travis-ci.org/ducknorris/rack-env-notifier)
 
-[![Code Climate](https://codeclimate.com/github/ducknorris/rack-env-notifier.png)](https://codeclimate.com/github/ducknorris/rack-env-notifier) [![Dependency Status](https://gemnasium.com/ducknorris/rack-env-notifier.png)](https://gemnasium.com/ducknorris/rack-env-notifier)[![Gem Version](https://badge.fury.io/rb/rack-env-notifier.png)](http://badge.fury.io/rb/rack-env-notifier)
+[![Code Climate](https://codeclimate.com/github/ducknorris/rack-env-notifier.png)](https://codeclimate.com/github/ducknorris/rack-env-notifier) [![Dependency Status](https://gemnasium.com/ducknorris/rack-env-notifier.png)](https://gemnasium.com/ducknorris/rack-env-notifier) [![Gem Version](https://badge.fury.io/rb/rack-env-notifier.png)](http://badge.fury.io/rb/rack-env-notifier)
 
 Middleware that displays the custom (environment) notification for every html page. Designed to work both in production and in development.
 
-![alt tag](https://raw.github.com/ducknorris/env_notifier/master/assets/preview1.png)
+![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview1.png)
 
-![alt tag](https://raw.github.com/ducknorris/env_notifier/master/assets/preview2.png)
+![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview2.png)
 
-![alt tag](https://raw.github.com/ducknorris/env_notifier/master/assets/preview3.png)
+![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview3.png)
 
-![alt tag](https://raw.github.com/ducknorris/env_notifier/master/assets/preview4.png)
+![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview4.png)
 
-![alt tag](https://raw.github.com/ducknorris/env_notifier/master/assets/preview5.png)
+![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview5.png)
 
-![alt tag](https://raw.github.com/ducknorris/env_notifier/master/assets/preview6.png)
+![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview6.png)
 
-![alt tag](https://raw.github.com/ducknorris/env_notifier/master/assets/preview7.png)
+![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview7.png)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'env_notifier'
+    gem 'rack-env-notifier'
 
 And then execute:
 
@@ -30,7 +30,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install env_notifier
+    $ gem install rack-env-notifier
 
 ## Usage
 
