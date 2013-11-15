@@ -2,7 +2,7 @@
 
 [![Code Climate](https://codeclimate.com/github/ducknorris/rack-env-notifier.png)](https://codeclimate.com/github/ducknorris/rack-env-notifier) [![Dependency Status](https://gemnasium.com/ducknorris/rack-env-notifier.png)](https://gemnasium.com/ducknorris/rack-env-notifier) [![Gem Version](https://badge.fury.io/rb/rack-env-notifier.png)](http://badge.fury.io/rb/rack-env-notifier)
 
-Middleware that displays the custom (environment) notification for every html page. Designed to work both in production and in development.
+Middleware that displays the custom notification for every html page. Designed to work both in production and in development.
 
 ![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview1.png)
 
@@ -34,7 +34,7 @@ Or install it yourself as:
 
 ## Usage
 
-This Gem will display a custom notification on every html page. By default it will only work on Development Environment. This can be overriden like so:
+This Gem can display a custom notification on every html page. This can be configured like this:
 
     Rack::EnvNotifier.notify = Rails.env.production?
 
@@ -46,7 +46,13 @@ or
 
 #### Position on screen
 
-Even though the "default" position is at the top of the page, the notification uses ``#env-notifer`` CSS ID. This can be customized further on, using custom CSS.
+The notification uses ``#env-notifer`` CSS ID. This can be customized, using custom CSS.
+
+To disable default CSS and use custom configure the initializer:
+
+    Rack::EnvNotifier.custom_css = true
+
+And define custom CSS:
 
     #env-notifier {
       font-size: 16px;
@@ -81,6 +87,16 @@ For Ruby on Rails, by default the message it will be the name of the current env
       Rack::EnvNotifier.message = "qa environment"
     else
       Rack::EnvNotifier.message = "hot environment"
+    end
+
+
+### Rails
+
+Here is a sample initializer:
+
+    if Rails.env.development?
+      Rack::EnvNotifier.notify = true
+      Rack::EnvNotifier.message = 'Dev'
     end
 
 ## Contributing
