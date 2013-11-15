@@ -34,7 +34,7 @@ Or install it yourself as:
 
 ## Usage
 
-This Gem can display a custom notification on every html page. This can be configured like this:
+Rack::EnvNotifier can display a custom notification on every html page. It can be configured:
 
     Rack::EnvNotifier.notify = Rails.env.production?
 
@@ -46,13 +46,13 @@ or
 
 #### Position on screen
 
-The notification uses ``#env-notifer`` CSS ID. This can be customized, using custom CSS.
+The notification message is wrapped by ``#env-notifer`` CSS ID. This can be customized using custom CSS.
 
-To disable default CSS and use custom configure the initializer:
+To disable default CSS and use a custom one, configure the initializer:
 
     Rack::EnvNotifier.custom_css = true
 
-And define custom CSS:
+and define the custom CSS:
 
     #env-notifier {
       font-size: 16px;
@@ -78,7 +78,7 @@ And define custom CSS:
 
     Rack::EnvNotifier.message = "development mode"
 
-For Ruby on Rails, by default the message it will be the name of the current environment. This can be overriden like so:
+The default message is configured in the initializer:
 
     case Rails.env
     when "development"
@@ -90,9 +90,7 @@ For Ruby on Rails, by default the message it will be the name of the current env
     end
 
 
-### Rails
-
-Here is a sample initializer:
+### Rails Sample Initializer
 
     if Rails.env.development?
       Rack::EnvNotifier.notify = true

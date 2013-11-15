@@ -1,4 +1,8 @@
-## v0.03
+## v0.0.4
+
+* Update README
+
+## v0.0.3
 
 * Remove railtie
 * Custom CSS suport
