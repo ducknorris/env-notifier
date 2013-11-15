@@ -77,13 +77,30 @@ describe Rack::EnvNotifier do
       get '/some/path'
     end
 
-    it "does format the Notification" do
-      Rack::EnvNotifier.notification.should eq(<<-EOF
+    describe "with default CSS" do
+      it "does format the Notification" do
+        Rack::EnvNotifier.notification.should eq(<<-EOF
 <!-- Notify Start -->
 <div id="env-notifier" class="notification" style="position: fixed; top: 0; right: 0; left: 0; background: rgba(150, 50, 50, .7); color: #fff; text-align: center; font-size: 16px; font-weight: bold; padding: 2px; z-index: 999999">notification</div>
 <!-- Notify End -->
-      EOF
-      )
+        EOF
+        )
+      end
+    end
+
+    context "with custom CSS" do
+      before do
+        Rack::EnvNotifier.custom_css = true
+      end
+
+      it "does format the Notification" do
+        Rack::EnvNotifier.notification.should eq(<<-EOF
+<!-- Notify Start -->
+<div id="env-notifier" class="notification">notification</div>
+<!-- Notify End -->
+        EOF
+        )
+      end
     end
   end
 end

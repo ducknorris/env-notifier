@@ -3,28 +3,44 @@ require 'rack/env_notifier/body_injector'
 module Rack
   class EnvNotifier
     class << self
+      def custom_css
+        @custom_css
+      end
+
+      def custom_css=(css)
+        @custom_css = css
+      end
+
       def message
         @message
       end
 
-      def message=(message)
-        @message = message
+      def message=(msg)
+        @message = msg
       end
 
       def notification
-        <<-EOF
+        if @custom_css == true
+          <<-EOF
+<!-- Notify Start -->
+<div id="env-notifier" class="#{@message.gsub(/[^a-z]/i, '-').gsub(/--*/, '-').gsub(/-$/, '')}">#{@message}</div>
+<!-- Notify End -->
+          EOF
+        else
+          <<-EOF
 <!-- Notify Start -->
 <div id="env-notifier" class="#{@message.gsub(/[^a-z]/i, '-').gsub(/--*/, '-').gsub(/-$/, '')}" style="position: fixed; top: 0; right: 0; left: 0; background: rgba(150, 50, 50, .7); color: #fff; text-align: center; font-size: 16px; font-weight: bold; padding: 2px; z-index: 999999">#{@message}</div>
 <!-- Notify End -->
-        EOF
+          EOF
+        end
       end
 
       def notify?
         @notify
       end
 
-      def notify=(notify)
-        @notify = notify
+      def notify=(ntf)
+        @notify = ntf
       end
     end
 
