@@ -71,7 +71,7 @@
 <h2>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>This Gem can display a custom notification on every html page. This can be configured like this:</p>
+<p>Rack::EnvNotifier can display a custom notification on every html page. It can be configured:</p>
 
 <pre><code>Rack::EnvNotifier.notify = Rails.env.production?
 </code></pre>
@@ -87,14 +87,14 @@
 <h4>
 <a name="position-on-screen" class="anchor" href="#position-on-screen"><span class="octicon octicon-link"></span></a>Position on screen</h4>
 
-<p>The notification uses <code>#env-notifer</code> CSS ID. This can be customized, using custom CSS.</p>
+<p>The notification message is wrapped by <code>#env-notifer</code> CSS ID. This can be customized using custom CSS.</p>
 
-<p>To disable default CSS and use custom configure the initializer:</p>
+<p>To disable default CSS and use a custom one, configure the initializer:</p>
 
 <pre><code>Rack::EnvNotifier.custom_css = true
 </code></pre>
 
-<p>And define custom CSS:</p>
+<p>and define the custom CSS:</p>
 
 <pre><code>#env-notifier {
   font-size: 16px;
@@ -122,7 +122,7 @@
 <pre><code>Rack::EnvNotifier.message = "development mode"
 </code></pre>
 
-<p>For Ruby on Rails, by default the message it will be the name of the current environment. This can be overriden like so:</p>
+<p>The default message is configured in the initializer:</p>
 
 <pre><code>case Rails.env
 when "development"
@@ -135,9 +135,7 @@ end
 </code></pre>
 
 <h3>
-<a name="rails" class="anchor" href="#rails"><span class="octicon octicon-link"></span></a>Rails</h3>
-
-<p>Here is a sample initializer:</p>
+<a name="rails-sample-initializer" class="anchor" href="#rails-sample-initializer"><span class="octicon octicon-link"></span></a>Rails Sample Initializer</h3>
 
 <pre><code>if Rails.env.development?
   Rack::EnvNotifier.notify = true
