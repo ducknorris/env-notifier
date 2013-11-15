@@ -36,7 +36,7 @@ Or install it yourself as:
 
 For Rails add use the middleware in application.rb:
 
-  config.middleware.use Rack::EnvNotifier
+    config.middleware.use Rack::EnvNotifier
 
 
 Rack::EnvNotifier can display a custom notification on every html page. It can be configured:
