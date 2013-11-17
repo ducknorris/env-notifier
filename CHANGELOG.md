@@ -1,3 +1,7 @@
+## v0.0.5
+
+* Update code documentation
+
 ## v0.0.4
 
 * Update README
