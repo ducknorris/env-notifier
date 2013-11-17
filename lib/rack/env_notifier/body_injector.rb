@@ -1,6 +1,8 @@
 module Rack
   class EnvNotifier
     class BodyInjector
+      # Lookup for <body> tag and inject notification after
+
       BODY_TAG_REGEX = /<body>|<body[^(er)][^<]*>/
 
       attr_reader :content_length, :new_body, :notification_added
@@ -13,6 +15,9 @@ module Rack
       def inject!(env)
         @env = env
         @body.close if @body.respond_to?(:close)
+
+        # Convert String body to Array so it can respond to each method
+        # In test environment body may be a String object
 
         @body = [@body] if @body.is_a? String
 
@@ -28,6 +33,8 @@ module Rack
 
             @notification_added = true
           end
+
+          # Keep track of content_length
 
           @content_length += line.bytesize
         end

@@ -19,6 +19,8 @@ module Rack
         @message = msg
       end
 
+      # Format notification based on custom_css value
+
       def notification
         if @custom_css == true
           <<-EOF
@@ -35,12 +37,12 @@ module Rack
         end
       end
 
-      def notify?
-        @notify
-      end
-
       def notify=(ntf)
         @notify = ntf
+      end
+
+      def notify?
+        @notify
       end
     end
 
@@ -55,18 +57,23 @@ module Rack
     def _call(env)
       status, headers, body = @app.call(env)
 
-      # inject headers, notification
+      # Inject headers, notification, update content-length header
+
       if status == 200 and EnvNotifier.notify?
 
-        # inject notification
+        # Inject notification
+
         if headers['Content-Type'] =~ %r{text/html} then
           injector = BodyInjector.new(body, EnvNotifier.notification)
           injector.inject!(env)
 
-          # inject header
+          # Inject header
+
           if injector.notification_added
             headers['X-EnvNotifier'] = EnvNotifier.message
           end
+
+          # Update content-length header after the body is modified
 
           headers['Content-Length'] = injector.content_length.to_s
           [status, headers, injector.new_body]
