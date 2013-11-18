@@ -4,20 +4,6 @@
 
 Middleware that displays the custom notification for every html page. Designed to work both in production and in development.
 
-![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview1.png)
-
-![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview2.png)
-
-![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview3.png)
-
-![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview4.png)
-
-![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview5.png)
-
-![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview6.png)
-
-![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview7.png)
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -101,6 +87,22 @@ The default message is configured in the initializer:
       Rack::EnvNotifier.notify = true
       Rack::EnvNotifier.message = 'Dev'
     end
+
+## Preview
+
+![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview1.png)
+
+![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview2.png)
+
+![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview3.png)
+
+![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview4.png)
+
+![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview5.png)
+
+![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview6.png)
+
+![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview7.png)
 
 ## Contributing
 
