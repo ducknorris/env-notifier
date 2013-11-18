@@ -114,4 +114,4 @@ Thanks to our [contributors](https://github.com/ducknorris/rack-env-notifier/gra
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-#### Inspired by [harleyttd / miniprofiler](https://github.com/harleyttd/miniprofiler/)
+#### Inspired by [harleyttd / miniprofiler](https://github.com/harleyttd/miniprofiler/).
