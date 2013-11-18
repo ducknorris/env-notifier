@@ -106,7 +106,7 @@ The default message is configured in the initializer:
 
 ## Contributing
 
-Thanks to our [contributors](https://github.com/ducknorris/env_notifier/graphs/contributors).
+Thanks to our [contributors](https://github.com/ducknorris/rack-env-notifier/graphs/contributors).
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
