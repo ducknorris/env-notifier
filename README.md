@@ -90,19 +90,19 @@ The default message is configured in the initializer:
 
 ## Preview
 
-![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview1.png)
+![alt tag](https://rack-env-notifier.s3.amazonaws.com/assets/preview1.png)
 
-![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview2.png)
+![alt tag](https://rack-env-notifier.s3.amazonaws.com/assets/preview2.png)
 
-![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview3.png)
+![alt tag](https://rack-env-notifier.s3.amazonaws.com/assets/preview3.png)
 
-![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview4.png)
+![alt tag](https://rack-env-notifier.s3.amazonaws.com/assets/preview4.png)
 
-![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview5.png)
+![alt tag](https://rack-env-notifier.s3.amazonaws.com/assets/preview5.png)
 
-![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview6.png)
+![alt tag](https://rack-env-notifier.s3.amazonaws.com/assets/preview6.png)
 
-![alt tag](https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview7.png)
+![alt tag](https://rack-env-notifier.s3.amazonaws.comassets/preview7.png)
 
 ## Contributing
 
