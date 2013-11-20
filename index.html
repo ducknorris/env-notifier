@@ -36,20 +36,6 @@
 
 <p>Middleware that displays the custom notification for every html page. Designed to work both in production and in development.</p>
 
-<p><img src="https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview1.png" alt="alt tag"></p>
-
-<p><img src="https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview2.png" alt="alt tag"></p>
-
-<p><img src="https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview3.png" alt="alt tag"></p>
-
-<p><img src="https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview4.png" alt="alt tag"></p>
-
-<p><img src="https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview5.png" alt="alt tag"></p>
-
-<p><img src="https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview6.png" alt="alt tag"></p>
-
-<p><img src="https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview7.png" alt="alt tag"></p>
-
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
 
@@ -70,6 +56,11 @@
 
 <h2>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>For Rails add use the middleware in application.rb:</p>
+
+<pre><code>config.middleware.use Rack::EnvNotifier
+</code></pre>
 
 <p>Rack::EnvNotifier can display a custom notification on every html page. It can be configured:</p>
 
@@ -144,9 +135,26 @@ end
 </code></pre>
 
 <h2>
+<a name="preview" class="anchor" href="#preview"><span class="octicon octicon-link"></span></a>Preview</h2>
+
+<p><img src="https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview1.png" alt="alt tag"></p>
+
+<p><img src="https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview2.png" alt="alt tag"></p>
+
+<p><img src="https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview3.png" alt="alt tag"></p>
+
+<p><img src="https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview4.png" alt="alt tag"></p>
+
+<p><img src="https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview5.png" alt="alt tag"></p>
+
+<p><img src="https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview6.png" alt="alt tag"></p>
+
+<p><img src="https://raw.github.com/ducknorris/rack-env-notifier/master/assets/preview7.png" alt="alt tag"></p>
+
+<h2>
 <a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
 
-<p>Thanks to our <a href="https://github.com/ducknorris/env_notifier/graphs/contributors">contributors</a>.</p>
+<p>Thanks to our <a href="https://github.com/ducknorris/rack-env-notifier/graphs/contributors">contributors</a>.</p>
 
 <ol>
 <li>Fork it</li>
@@ -155,8 +163,7 @@ end
 <li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
 <li>Create new Pull Request</li>
 </ol><h4>
-<a name="inspired-by-harleyttd--miniprofiler" class="anchor" href="#inspired-by-harleyttd--miniprofiler"><span class="octicon octicon-link"></span></a>Inspired by <a href="https://github.com/harleyttd/miniprofiler/">harleyttd / miniprofiler</a>
-</h4>
+<a name="inspired-by-harleyttd--miniprofiler" class="anchor" href="#inspired-by-harleyttd--miniprofiler"><span class="octicon octicon-link"></span></a>Inspired by <a href="https://github.com/harleyttd/miniprofiler/">harleyttd / miniprofiler</a>.</h4>
         </section>
 
         <aside id="sidebar">
