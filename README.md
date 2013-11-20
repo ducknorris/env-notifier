@@ -102,7 +102,7 @@ The default message is configured in the initializer:
 
 ![alt tag](https://rack-env-notifier.s3.amazonaws.com/assets/preview6.png)
 
-![alt tag](https://rack-env-notifier.s3.amazonaws.comassets/preview7.png)
+![alt tag](https://rack-env-notifier.s3.amazonaws.com/assets/preview7.png)
 
 ## Contributing
 
