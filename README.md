@@ -115,3 +115,7 @@ Thanks to our [contributors](https://github.com/ducknorris/rack-env-notifier/gra
 5. Create new Pull Request
 
 #### Inspired by [harleyttd / miniprofiler](https://github.com/harleyttd/miniprofiler/).
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ducknorris/rack-env-notifier/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
