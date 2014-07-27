@@ -13,8 +13,8 @@ describe Rack::EnvNotifier::BodyInjector do
       expect(regex.match("<body attribute='something'><h1></h1></body>").to_s).to eq("<body attribute='something'>")
     end
 
-    it 'responds false when no head tag' do
-      expect(regex.match("<html></html>")).to eq false
+    it 'responds nil when no head tag' do
+      expect(regex.match("<html></html>")).to eq nil
     end
   end
 end
