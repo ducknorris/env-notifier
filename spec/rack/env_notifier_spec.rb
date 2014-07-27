@@ -44,7 +44,7 @@ describe Rack::EnvNotifier do
     end
 
     it 'has the Notification in the body' do
-      expect(last_response.body.include?('<div id="env-notifier" class="warning-hot-zone" style="position: fixed; top: 0; right: 0; left: 0; background: rgba(150, 50, 50, .7); color: #fff; text-align: center; font-size: 16px; font-weight: bold; padding: 2px; z-index: 999999">warning!!! hot zone!!!</div>')).to be_true
+      expect(last_response.body.include?('<div id="env-notifier" class="warning-hot-zone" style="position: fixed; top: 0; right: 0; left: 0; background: rgba(150, 50, 50, .7); color: #fff; text-align: center; font-size: 16px; font-weight: bold; padding: 2px; z-index: 999999">warning!!! hot zone!!!</div>')).to eq true
     end
 
   end
@@ -62,11 +62,11 @@ describe Rack::EnvNotifier do
     end
 
     it 'has the X-EnvNotifier header' do
-      expect(last_response.headers.has_key?('X-EnvNotifier')).not_to be_true
+      expect(last_response.headers.has_key?('X-EnvNotifier')).not_to eq true
     end
 
     it 'has the Notification in the body' do
-      expect(last_response.body.include?('<div id="env-notifier" class="warning" style="position: fixed; top: 0; right: 0; left: 0; background: rgba(150, 50, 50, .7); color: #fff; text-align: center; font-size: 16px; font-weight: bold; padding: 2px; z-index: 999999">warning</div>')).not_to be_true
+      expect(last_response.body.include?('<div id="env-notifier" class="warning" style="position: fixed; top: 0; right: 0; left: 0; background: rgba(150, 50, 50, .7); color: #fff; text-align: center; font-size: 16px; font-weight: bold; padding: 2px; z-index: 999999">warning</div>')).not_to eq true
     end
 
   end
