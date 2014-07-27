@@ -1,3 +1,7 @@
+## v0.0.6
+
+* Update RSpec syntax
+
 ## v0.0.5
 
 * Update code documentation
