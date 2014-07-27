@@ -35,7 +35,7 @@ describe Rack::EnvNotifier do
     end
 
     it 'has the X-EnvNotifier header' do
-      expect(last_response.headers.has_key?('X-EnvNotifier')).to be_true
+      expect(last_response.headers.has_key?('X-EnvNotifier')).to eq true
     end
 
     it 'has only one X-EnvNotifier header' do
