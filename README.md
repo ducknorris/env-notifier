@@ -2,7 +2,7 @@
 
 [![Code Climate](https://codeclimate.com/github/ducknorris/rack-env-notifier.png)](https://codeclimate.com/github/ducknorris/rack-env-notifier) [![Dependency Status](https://gemnasium.com/ducknorris/rack-env-notifier.png)](https://gemnasium.com/ducknorris/rack-env-notifier) [![Gem Version](https://badge.fury.io/rb/rack-env-notifier.png)](http://badge.fury.io/rb/rack-env-notifier)
 
-Middleware that displays the custom notification for every html page. Designed to work both in production and in development.
+Middleware that displays a custom notification for every html page. Designed to work both in production and in development.
 
 ## Installation
 
