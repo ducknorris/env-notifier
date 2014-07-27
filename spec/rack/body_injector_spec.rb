@@ -14,7 +14,7 @@ describe Rack::EnvNotifier::BodyInjector do
     end
 
     it 'responds false when no head tag' do
-      expect(regex.match("<html></html>")).to be_false
+      expect(regex.match("<html></html>")).to eq false
     end
   end
 end
